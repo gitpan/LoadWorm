@@ -17,7 +17,7 @@ here. The pod will tell you how to operate it.
 
 INSTALLATION
  
-To install LoadWorm, all you have to do is the usual
+To install LoadWorm, all you do is the usual
 
 perl Makefile.PL
 make
@@ -54,9 +54,7 @@ And various core Perl modules, including
 
 
 
-AUTHOR
-
-Glenn Wood, Glenn.Wood@SaveSmart.com
+AUTHOR: Glenn Wood, C<glenwood@alumni.caltech.edu>
 
 Copyright 1997-1998 SaveSmart, Inc.  All rights reserved.
 Released under the Perl Artistic License.
@@ -64,19 +62,18 @@ This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
 
-
-
-=============================================================================
+#---------------------------------------------------------------------#
+( $VERSION ) = sprintf("%d.%02d", q$Revision: 1.2 $ =~ /(\d+)\.(\d+)/)
+===========================================================================================
 HISTORY
 
+01.05.18 Version 1.02 - return after long hiatus; improved release process; no other changes.
 98.11.14 Version 0.12 - make dist without the \015's
 98.06.30 Version 0.11
 98.06.30 Implemented Makefile.PL
 98.06.30 Restored AnyURL.pm, into eg/.
-98.06.30 Improved $VERSION calculation.
+98.06.30 Improved version calculation.
 98.06.27 Renamed LoadWorm.pm - the package is named "LoadWorm".
 
 98.06.23 Version 0.10 uploaded to CPAN.
 98.06.23 AnyURL.pm removed; caused problems with proper CPAN distribution.
-
-README Revision $Id: README 1.5 1998/11/16 21:42:44 Glenn dev $

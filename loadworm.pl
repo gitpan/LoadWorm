@@ -1,9 +1,9 @@
 #!/usr/local/bin/perl
 
-# AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
+# Glenn Wood, C<glenwood@alumni.caltech.edu>.
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: //Galileo/source/the_club/tools/loadworm/rcs/loadworm.pl 1.39 1998/11/16 02:14:44 Glenn dev Glenn $
+# $Header: C:/CVS/LoadWorm/loadworm.pl,v 1.1.1.1 2001/05/19 02:54:40 Glenn Wood Exp $
 #
 # see: http://www.york.ac.uk/~twh101/libwww/lwpcook.html
 #      http://www.cs.washington.edu/homes/marclang/ParallelUA/

@@ -1,5 +1,6 @@
 
 package AnyURL;
+# Author: Glenn Wood, C<glenwood@alumni.caltech.edu>.
 
 1;
 
