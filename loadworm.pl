@@ -3,7 +3,7 @@
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: P:/source/the_club/tools/loadworm/rcs/loadworm.pl 1.33 1998/06/02 19:25:56 Glenn dev $
+# $Header: //galileo/source/the_club/tools/LoadWorm/rcs/loadworm.pl 1.36 1998/06/24 02:10:06 Glenn dev $
 #
 # see: http://www.york.ac.uk/~twh101/libwww/lwpcook.html
 #      http://www.cs.washington.edu/homes/marclang/ParallelUA/
@@ -28,6 +28,8 @@ use loadworm;
 
 	$| = 1;	# autoflush STDOUT.
 	
+   print "LoadWorm Version $LoadWorm::VERSION\n";
+
 	$ua = new LWP::UserAgent;  # we create a global UserAgent object
 	
 	LoadWorm::GetConfiguration("loadworm.cfg");
@@ -236,7 +238,22 @@ sub ListFileLinks { my($Depth, $GetOrPost, $Link, $BASE, $parent) = @_;
 	unless ( $ENV{NOIMAGES} )
 	{
 		@links = @{$html->extract_links(qw(img))};
-		if ( $#links )
+		if ( @links )
+		{
+         my $start = LoadWorm->GetTickCount();
+			for ( @links )
+			{
+				&ListFileLinks($Depth+1, 'GET', @$_[0], $base, $Link);
+			}
+         my $finish = LoadWorm->GetTickCount();
+			print TIMING "ALL_OF $Link\n$start,$finish 0\n";
+		}
+	}
+
+	unless ( $ENV{NOFRAMES} )
+	{
+		@links = @{$html->extract_links(qw(frame))};
+		if ( @links )
 		{
          my $start = LoadWorm->GetTickCount();
 			for ( @links )
@@ -270,6 +287,7 @@ ANCHOR:
 	
 	$html->delete();
 }
+
 
 
 #

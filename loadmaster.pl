@@ -3,7 +3,7 @@
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: P:/source/the_club/tools/loadworm/rcs/loadmaster.pl 1.20 1998/06/02 18:36:26 Glenn dev $
+# $Header: //galileo/source/the_club/tools/LoadWorm/rcs/loadmaster.pl 1.20 1998/06/02 18:36:26 Glenn dev $
 	
 #use strict;
 use Tk;

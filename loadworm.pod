@@ -1,4 +1,9 @@
-=head1 LoadWorm - Website Stress Tool
+
+=head1 NAME
+
+LoadWorm - WebSite Stress and Validation Tool
+
+=head1 DESCRIPTION
 
 The LoadWorm is a tool to load a website with requests, and to record the resultant performance, from a web client's perspective.
 It can also be used for various investigative purposes, such as validation of the website, or discovering all the referrers to a page, etc.
@@ -31,7 +36,7 @@ The LoadWorm and LoadMaster/Slave works on Windows NT and Unix (tested on Solari
 or any combination of these systems.
 
 
-=head1 Website Traversal
+=head1 WEBSITE TRAVERSAL
 
 The LoadWorm takes one or more URLs as input (specified in its configuration file, F<loadworm.cfg>).
 
@@ -72,11 +77,11 @@ without the overhead of the route calculations inherent in the LoadWorm's config
 
 =item *
 
-For known bugs and limitations, see "Further Directions", at the bottom of this document.
+For known bugs and limitations, see L<NOTES>, at the bottom of this document.
 
 =back
 
-=head1 Website Loading
+=head1 WEBSITE LOADING
 
 Website loading is performed by the LoadMaster program. The LoadMaster runs on a master computer.
 One or more LoadSlaves may run on the same computer, or different computers on the same network.
@@ -133,7 +138,7 @@ To finish a test, you can terminate all the LoadSlaves from the LoadMaster GUI, 
 The owners of the host computers you've borrowed for the load test might want to terminate the test on their computer.
 They can do that by closing the LoadSlave on their computer, with no ill effect on your test except for the lost data and load.
 
-=head1 The Configuration File
+=head1 THE CONFIGURATION FILE
 
 The process of the LoadWorm is controlled by its configuration file.
 This file is named F<loadworm.cfg>, and is found in the current working directory.
@@ -349,7 +354,7 @@ I<owa/cart.get> only 5, etc.  The count is for all URLs that match these regular
 matter what the CGI parameters might be to these CGI scripts, the scripts themselves will be called only as many
 times as the [Limit] section specifies.
 
-=head1 Example of a Configuration File
+=head2 Example of a Configuration File
 
 
 	[Mode]
@@ -404,7 +409,9 @@ times as the [Limit] section specifies.
 	   
    
 
-=head1 The Results Database
+=head1 THE RESULTS DATABASE
+
+B<NOTE: This information is not current, but it gives you the general idea of what is possible once we tie up a few loose ends.>
 
 The results of a session of LoadWorm are recorded in a Perl accessible database.  Although some information is printed to standard output as the session progresses, the most interesting results should be discovered by scanning the LoadWorm database for that session.
 The database consists of several hash-tied tables.  Each table is keyed by the URL associated with it, and the value will be a string representing the result.  For some of these tables, the result is an array of strings representing several interactions with that URL.  Unfortunately, Perl's built-in Tie::Hash will not record arrays in a tied table.  For these tables, the data is converted to ASCII text data and written to a sequential file.  The Perl code listed below can be used to pull this sequential file back into a hashed array in your Perl report generator.
@@ -448,7 +455,7 @@ This table is written by the user-customized validation routineZ<>(s).
 =back
 
 
-=head1 Notes
+=head1 NOTES
 
 =over 4
 
@@ -490,13 +497,59 @@ Etc.
 
 =back
 
+=head1 PREREQUESITES
+
+These are the versions of Perl modules under which LoadWorm is known to work.
+It may be just fine with earlier or later versions.
+
+=over 4
+
+=item *
+
+Perl 5.004 (thanks, Larry!)
+
+=item *
+
+F<LWP> from libwww-perl-5_20
+
+=item *
+
+F<LWP::Parallel> from ParallelUserAgent-v2_31 (a special thanks to Marc Langheinrich!)
+
+=item *
+
+F<Tk> from Tk402_003
+
+=item *
+
+F<Time::Local> and F<Time::HiRes> for Unix OS.
+
+=item *
+
+F<Win32> for Win32 OS.
+
+=item *
+
+And various core Perl modules, including 
+F<English>,
+F<File::Path>,
+F<File::Copy>,
+F<Socket>,
+F<Carp>,
+F<FileHandle>,
+and F<Sys::Hostname>.
+
+=back
+
+
+
 =head1 AUTHOR
 
-Glenn Wood, Glenn.Wood@savesmart.com
+Glenn Wood, Glenn.Wood@SaveSmart.com
 
 Copyright 1997-1998 SaveSmart, Inc.
 
 Released under the Perl Artistic License.
 
-$Header: P:/source/the_club/tools/loadworm/rcs/loadworm.pod 1.6 1998/05/26 00:33:16 Glenn dev $
+$Id: loadworm.pod 1.7 1998/06/24 02:20:50 Glenn dev $
 

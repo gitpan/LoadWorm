@@ -2,13 +2,18 @@
 
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
+# Copyright (c) 1997 -1998 SaveSmart, Inc. All rights reserved.
 # Released under the Perl Artistic License.
-# $Header: P:/source/the_club/tools/loadworm/rcs/loadworm.pm 1.15 1998/06/01 02:20:58 Glenn dev $
+# This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
+#
+# $Id: loadworm.pm 1.22 1998/06/18 23:00:38 Glenn dev $
 
 use LWP::Parallel::RobotUA qw(:CALLBACK);
 
 package LoadWorm;
 use English;
+
+$VERSION = do { my @r=(q$Id: loadworm.pm 1.22 1998/06/18 23:00:38 Glenn dev $=~/\d+/g); sprintf "%d."."%02d"x$#r,@r }; 
 
 if ( $OSNAME eq "MSWin32" )
 {

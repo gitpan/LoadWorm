@@ -1,0 +1,59 @@
+
+LoadWorm - WebSite Stress and Validation Tool
+
+The LoadWorm is a tool to load a website with programmed requests, and to
+record the resultant performance, from a web client's perspective.  It can
+also be used for various investigative purposes, such as validation of the
+website, or discovering all the referrers to a page, etc. I have already
+used it to discover faults that have lead to a major re-architecting here
+at SaveSmart commercial site(s). It runs, unaltered, on Unix and Win32
+(tested on Solaris 2.4, Linux, and WinNT 4.0).
+
+This is an application, written in Perl, that uses LWP, LWP::Parallel,
+sockets (lots of them!), and Tk, so there is plenty to get your hands onto
+here. The pod will tell you how to operate it.
+
+LATEST VERSION: (also the initial CPAN version) is 0.10
+
+
+
+
+DEPENDANCIES
+
+LoadWorm depends on the following modules for it's function.
+
+Perl 5.004 (thanks, Larry!)
+
+LWP from libwww-perl-5_20
+
+LWP::Parallel from ParallelUserAgent-v2_31 (thanks to Marc Langheinrich!)
+
+Tk from Tk402_003
+
+Time::Local and Time::HiRes for Unix OS.
+
+Win32 for Win32 OS.
+
+And various core Perl modules, including 
+    English, File::Path, File::Copy, Socket, Carp, FileHandle, Sys::Hostname.
+
+
+
+
+AUTHOR
+
+Glenn Wood, Glenn.Wood@SaveSmart.com
+
+Copyright 1997-1998 SaveSmart, Inc.
+
+Released under the Perl Artistic License.
+
+
+
+=============================================================================
+HISTORY
+
+98.6.23 Version 0.10 uploaded to CPAN.
+98.6.23 AnyURL.pm removed; caused problems with proper CPAN distribution.
+
+README Revision $Id: README 1.2 1998/06/24 03:03:54 Glenn dev $
