@@ -7,7 +7,7 @@
 #
 # see: http://www.york.ac.uk/~twh101/libwww/lwpcook.html
 
-use loadworm;
+use LoadWorm;
 use English;
 require 5.004;
 

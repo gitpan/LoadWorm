@@ -3,11 +3,11 @@
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: //galileo/source/the_club/tools/LoadWorm/rcs/loadmaster.pl 1.20 1998/06/02 18:36:26 Glenn dev $
+# $Header: //Galileo/source/the_club/tools/loadworm/rcs/loadmaster.pl 1.21 1998/06/27 00:54:08 Glenn dev $
 	
 #use strict;
 use Tk;
-use loadworm;
+use LoadWorm;
 use English;
 use File::Path;
 use File::Copy;

@@ -3,7 +3,7 @@
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: //galileo/source/the_club/tools/LoadWorm/rcs/loadworm.pl 1.36 1998/06/24 02:10:06 Glenn dev $
+# $Header: //Galileo/source/the_club/tools/loadworm/rcs/loadworm.pl 1.37 1998/06/27 00:52:56 Glenn dev $
 #
 # see: http://www.york.ac.uk/~twh101/libwww/lwpcook.html
 #      http://www.cs.washington.edu/homes/marclang/ParallelUA/
@@ -21,7 +21,7 @@ use HTTP::Date qw(str2time);
 use Carp;
 use URI::Escape;
 use URI::URL;
-use loadworm;
+use LoadWorm;
 #use LWP::Debug qw(+);
 #use Devel::DProf;
 

@@ -1,5 +1,5 @@
 
-LoadWorm - WebSite Stress and Validation Tool
+WHAT IS IT?
 
 The LoadWorm is a tool to load a website with programmed requests, and to
 record the resultant performance, from a web client's perspective.  It can
@@ -13,12 +13,26 @@ This is an application, written in Perl, that uses LWP, LWP::Parallel,
 sockets (lots of them!), and Tk, so there is plenty to get your hands onto
 here. The pod will tell you how to operate it.
 
-LATEST VERSION: (also the initial CPAN version) is 0.10
+
+
+INSTALLATION
+ 
+To install LoadWorm, all you have to do is the usual
+
+perl Makefile.PL
+make
+make install
+
+There is no 'make test', yet.  If LWP and Tk work, then LoadWorm should work.
+
+'make install' will install LoadWorm.pm in the site/ directory of perl.  You
+will find the working components of the LoadWorm ("loadworm.pl", "loadmaster.pl",
+loadslave.pl) in your current directory.  You will find an example "loadworm.cfg"
+configuration file in the ./eg/ directory.
 
 
 
-
-DEPENDANCIES
+DEPENDENCIES
 
 LoadWorm depends on the following modules for it's function.
 
@@ -26,7 +40,7 @@ Perl 5.004 (thanks, Larry!)
 
 LWP from libwww-perl-5_20
 
-LWP::Parallel from ParallelUserAgent-v2_31 (thanks to Marc Langheinrich!)
+LWP::Parallel from ParallelUserAgent-2.30 (thanks to Marc Langheinrich!)
 
 Tk from Tk402_003
 
@@ -44,16 +58,24 @@ AUTHOR
 
 Glenn Wood, Glenn.Wood@SaveSmart.com
 
-Copyright 1997-1998 SaveSmart, Inc.
-
+Copyright 1997-1998 SaveSmart, Inc.  All rights reserved.
 Released under the Perl Artistic License.
+This program is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
 
 
 
 =============================================================================
 HISTORY
 
-98.6.23 Version 0.10 uploaded to CPAN.
-98.6.23 AnyURL.pm removed; caused problems with proper CPAN distribution.
+98.06.30 Version 0.11
+98.06.30 Implemented Makefile.PL
+98.06.30 Restored AnyURL.pm, into eg/.
+98.06.30 Improved $VERSION calculation.
+98.06.27 Renamed LoadWorm.pm - the package is named "LoadWorm".
 
-README Revision $Id: README 1.2 1998/06/24 03:03:54 Glenn dev $
+98.06.23 Version 0.10 uploaded to CPAN.
+98.06.23 AnyURL.pm removed; caused problems with proper CPAN distribution.
+
+README Revision $Id: README 1.4 1998/07/02 02:59:28 Glenn dev $
