@@ -69,6 +69,7 @@ modify it under the same terms as Perl itself.
 =============================================================================
 HISTORY
 
+98.11.14 Version 0.12 - make dist without the \015's
 98.06.30 Version 0.11
 98.06.30 Implemented Makefile.PL
 98.06.30 Restored AnyURL.pm, into eg/.
@@ -78,4 +79,4 @@ HISTORY
 98.06.23 Version 0.10 uploaded to CPAN.
 98.06.23 AnyURL.pm removed; caused problems with proper CPAN distribution.
 
-README Revision $Id: README 1.4 1998/07/02 02:59:28 Glenn dev $
+README Revision $Id: README 1.5 1998/11/16 21:42:44 Glenn dev $

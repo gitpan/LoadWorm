@@ -552,7 +552,7 @@ Copyright 1997-1998 SaveSmart, Inc.
 
 Released under the Perl Artistic License.
 
-$Id: loadworm.pm 1.25 1998/07/01 05:17:24 Glenn dev Glenn $
+$Id: loadworm.pm 1.26 1998/07/01 05:17:24 Glenn dev $
 
 =cut
 
@@ -562,14 +562,14 @@ $Id: loadworm.pm 1.25 1998/07/01 05:17:24 Glenn dev Glenn $
 # Released under the Perl Artistic License.
 # This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.
 #
-# $Id: loadworm.pm 1.25 1998/07/01 05:17:24 Glenn dev Glenn $
+# $Id: loadworm.pm 1.26 1998/07/01 05:17:24 Glenn dev $
 
 use LWP::Parallel::RobotUA qw(:CALLBACK);
 
 package LoadWorm;
 use English;
 
-$VERSION = do { my @r=(q $Name: r0_11 $ =~ /\d+/g ); sprintf "%d."."%02d"x$#r,@r }; 
+$VERSION = do { my @r=(q $Name: r0_12 $ =~ /\d+/g ); sprintf "%d."."%02d"x$#r,@r }; 
 
 if ( $OSNAME eq "MSWin32" )
 {

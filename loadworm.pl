@@ -3,7 +3,7 @@
 # AUTHOR Glenn Wood, Glenn.Wood@savesmart.com
 # Copyright 1997-1998 SaveSmart, Inc.
 # Released under the Perl Artistic License.
-# $Header: //Galileo/source/the_club/tools/loadworm/rcs/loadworm.pl 1.37 1998/06/27 00:52:56 Glenn dev $
+# $Header: //Galileo/source/the_club/tools/loadworm/rcs/loadworm.pl 1.39 1998/11/16 02:14:44 Glenn dev Glenn $
 #
 # see: http://www.york.ac.uk/~twh101/libwww/lwpcook.html
 #      http://www.cs.washington.edu/homes/marclang/ParallelUA/
@@ -179,7 +179,9 @@ sub ListFileLinks { my($Depth, $GetOrPost, $Link, $BASE, $parent) = @_;
 	
 	# Remove any '#' label from the URL, since it never goes out anyway.
 	$Link =~ s/(\#\w+)//;
-	$Link .= $1;
+# We'll need to process this label reference somehow, later, but at
+#  least this prevents repeated downloads of the same page.
+#	$Link .= $1;
 
 	# Add it to the "Parents" list.
 	if ( $Referers ) {
